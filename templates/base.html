@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        h4 {
+            color: #b5c1c0;
+            padding: 5px;
+            }
+    </style>
+    </head>
+    <body>
+    <header>
+       <div class="alert alert-info">
+            <h1>Миссия Колонизация Марса</h1>
+        </div>
+    <h4>И на Марсе будут яблони цвести!</h4>
+    </header>
+    <main role="main" class="container">
+        {% block content %}{% endblock %}
+    </main>
+    </body>
+</html>
