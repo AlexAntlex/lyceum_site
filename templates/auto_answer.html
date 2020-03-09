@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{anket_list["test"][0]["title"]}}{% endblock %}
+
+{% block content %}
+   {% for item in anket_list["test"] %}
+        {% for val in item %}
+            {% if val != 'title' and val != 'ready'%}
+                <h5>{{item[val][0]}}: {{item[val][1]}}</h5>
+            {% elif val == 'ready'%}
+                <h5>{{item[val][0]}} {{item[val][1]}}</h5>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
@@ -21,6 +22,12 @@ def list_prof(list):
     return render_template('list_prof.html', list=list, prof_list=prof_list)
 
 
+@app.route('/answer')
+def news():
+    with open("test.json", "rt", encoding="utf8") as f:
+        anket_list = json.loads(f.read())
+    return render_template('auto_answer.html', anket_list=anket_list)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
-

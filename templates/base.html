@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>{{ title }}</title>
+        <title>{% block title %}{{ title }}{% endblock %}</title>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <style>
-        h4 {
-            color: #b5c1c0;
-            padding: 5px;
-            }
+        @import url("static/css/style.css")
     </style>
     </head>
     <body>
