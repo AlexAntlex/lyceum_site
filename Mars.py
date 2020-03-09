@@ -1,8 +1,11 @@
 import json
+
+from django.shortcuts import redirect
 from flask import Flask, render_template, url_for
+from loginform import LoginForm
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 @app.route('/<title>')
 def index(title):
@@ -27,6 +30,14 @@ def news():
     with open("test.json", "rt", encoding="utf8") as f:
         anket_list = json.loads(f.read())
     return render_template('auto_answer.html', anket_list=anket_list)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        return redirect('/success')
+    return render_template('login.html', title='Авторизация', form=form)
 
 
 if __name__ == '__main__':
