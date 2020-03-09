@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Размещение по каютам{% endblock %}
+
+{% block content %}
+<div align="left">
+    <h1>Размещение по каютам</h1>
+</div>
+{% set num_ct = "Каюта №" %}
+    {% for plp in names %}
+    <div class="textlist">{{ plp }} - {{num_ct}} {{ loop.index }}{% if loop.first %} - Капитан корабля {% endif %}
+    </div>
+    {% endfor %}
+{% endblock %}
