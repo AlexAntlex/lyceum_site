@@ -11,6 +11,7 @@ UPLOAD_FOLDER = 'static/img'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
