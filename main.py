@@ -158,26 +158,27 @@ def landscape():
                                 <li data-target="#Mars" data-slide-to="2"></li>
                             </ul>
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="{url_for('static', filename='img/mars_1.jpg')}" 
-                                        alt="Mars_1" width="570" height="500">
-                                </div>
-                                <div class="carousel-item">
-                                  <img src="{url_for('static', filename='img/mars_2.jpg')}" 
-                                    alt="Mars_2" width="570" height="500">
-                                </div>
-                                <div class="carousel-item">
-                                  <img src="{url_for('static', filename='img/mars_3.jpg')}" 
-                                    alt="Mars_3" width="570" height="500">
-                                </div>
-                              </div>
-                              <a class="carousel-control-prev" href="#Mars" data-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                              </a>
-                              <a class="carousel-control-next" href="#Mars" data-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                              </a>
-                        </div>
+                                        <div class="carousel-item active">
+                                            <img class="d-block  w-70 ml-auto mr-auto" src="{url_for('static', filename='img/mars_1.jpg')}" 
+                                                alt="Mars_1">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img class="d-block  w-70 ml-auto mr-auto" src="{url_for('static', filename='img/mars_2.jpg')}" 
+                                            alt="Mars_2">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img class="d-block  w-70 ml-auto mr-auto" src="{url_for('static', filename='img/mars_3.jpg')}" 
+                                            alt="Mars_3">
+                                        </div>
+                                      </div>
+                                      <a class="carousel-control-prev" href="#Mars" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                      </a>
+                                      <a class="carousel-control-next" href="#Mars" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                      </a>
+                            </div>
+                        </div>    
                     </div>     
                 </body>
                 </html>'''

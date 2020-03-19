@@ -19,11 +19,36 @@ form.login_form {
     padding: 10px;
 }
 
-.carousel-inner img {
-      width: 100%;
-      height: 100%;
-  }
-
 div.image {
    content:url('MARS.png');
 }​
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+
+.carousel {
+  height: 700px !important;
+}
+
+.carousel-inner img {
+  height: 500px !important;
+  width: 800px !important;
+  margin: 0 auto;
+}
+
+.carousel-indicators li {
+  border-color: #000;
+}
+
+.carousel-indicators .active {
+  background-color: #000;
+}
+
+.carousel-control-next {
+    height: 500px !important;
+    width: 450px !important;
+}
+
+.carousel-control-prev {
+    height: 500px !important;
+    width: 450px !important;
+}
