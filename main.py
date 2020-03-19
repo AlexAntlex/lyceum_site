@@ -54,6 +54,11 @@ def distribution():
     return render_template('distrib.html', names=names)
 
 
+@app.route('/table/<male>/<int:age>')
+def table(male, age):
+    return render_template('table.html', male=male, age=age)
+
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS

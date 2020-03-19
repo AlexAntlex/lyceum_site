@@ -52,3 +52,16 @@ div.image {
     height: 500px !important;
     width: 450px !important;
 }
+
+table {
+        width: 60%;
+        margin: auto;
+        table-layout: fixed;
+   }
+
+th { text-align: center;
+}
+
+td {
+    text-align: center;
+   }

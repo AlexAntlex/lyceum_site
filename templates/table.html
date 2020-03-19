@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text text-center">
+    <h3>Оформление каюты</h3>
+</div>
+<table>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" class="table-active">Цвет стен</th>
+      <th scope="col" class="table-active">Эмблема</th>
+    </tr>
+  </thead>
+    <tbody>
+        <tr>
+            {% if male == 'male' %}
+                {% if age < 21 %}
+                    <th scope="row" class="table-info"></th>
+                    <td><img src="/static/img/male_2.jpg" class="img-fluid"></td>
+                {% elif age > 21%}
+                    <th scope="row" class="table-primary"></th>
+                    <td><img src="/static/img/male_1.jpg" class="img-fluid"></td>
+                {% endif %}
+            {% elif male == 'female' %}
+                {% if age > 21 %}
+                    <th scope="row" class="table-danger"></th>
+                    <td><img src="/static/img/female_2.jpg" class="img-fluid"></td>
+                {% elif age < 21%}
+                    <th scope="row" class="table-warning"></th>
+                    <td><img src="/static/img/female_1.jpg" class="img-fluid"></td>
+                {% endif %}
+            {% endif %}
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
